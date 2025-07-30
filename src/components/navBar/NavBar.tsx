@@ -4,7 +4,7 @@
 import { useState, useRef } from 'react';
 import styles from './NavBar.module.css';
 import Image from 'next/image';
-import logoImage from '@/assets/logo.avif';
+import logoImage from '@/assets/logo/logoh.png';
 
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
