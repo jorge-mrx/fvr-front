@@ -6,24 +6,34 @@ import styles from './CertificationSection.module.css';
 import EmilyPhoto from '@/assets/certificationSection/eggs.avif';
 import MichaelPhoto from '@/assets/certificationSection/eggs.avif';
 
+// 👉 Imágenes y SVGs columna derecha
+import Eggs from '@/assets/certificationSection/eggs.avif';
+import PublicContain from '@/assets/certificationSection/publicContain.webp';
+import OrangeDots from '@/assets/certificationSection/orange-dots.svg';
+import OrangeCurve from '@/assets/certificationSection/orange-curve-shape.svg';
+import FourStar from '@/assets/certificationSection/four-angle-star.svg';
+
 const CertificationSection = () => {
-  // Todas las imágenes se consumen desde este objeto
   const media = {
     emily: EmilyPhoto,
     michael: MichaelPhoto,
+    eggs: Eggs,
+    publicContain: PublicContain,
+    orangeDots: OrangeDots,
+    orangeCurve: OrangeCurve,
+    fourStar: FourStar,
   };
 
   return (
     <section className={styles.section}>
-      {/* Columna izquierda */}
+      {/* Columna izquierda (NO MODIFICADA) */}
       <div className={styles.leftCol}>
         <h1 className={styles.title}>
-          Certificación <br />
-          de inocuidad <br />
-          alim
+          Certificación
+          <br />
+          de inocuidad alim
           <span className={styles.swooshWrap}>
             entaria
-            {/* Subrayado asimétrico exacto en #F0BF4C */}
             <svg
               className={styles.swoosh}
               viewBox="0 0 480 28"
@@ -39,7 +49,7 @@ const CertificationSection = () => {
               />
             </svg>
           </span>{' '}
-          con alcance <br /> global
+          <br /> con alcance global
         </h1>
 
         <p className={styles.subtext}>
@@ -51,12 +61,11 @@ const CertificationSection = () => {
           <a href="#" className={styles.btnGreen}>
             Start Your Certification
           </a>
-
           <a href="#" className={styles.btnLink}>
             Learn About Our Services
           </a>
 
-          {/* Línea y flecha decorativa en verde */}
+          {/* Línea decorativa + flecha */}
           <svg
             className={styles.linkDecor}
             viewBox="0 0 220 70"
@@ -131,8 +140,32 @@ const CertificationSection = () => {
         </div>
       </div>
 
-      {/* Columna derecha (solo color por ahora) */}
-      <div className={styles.rightCol} />
+      {/* Columna derecha (ARREGLADA) */}
+      <div className={styles.rightCol}>
+        <div className={styles.imageCard}>
+          {/* Estas imágenes son de muestra, puedes reemplazarlas */}
+          <Image
+            src={media.eggs}
+            alt="Main Image"
+            className={`${styles.imgMain}`}
+          />
+          <Image
+            src={media.publicContain}
+            alt="Decorative Image 1"
+            className={`${styles.imgSecondary}`}
+          />
+          <Image
+            src={media.publicContain}
+            alt="Decorative Image 2"
+            className={`${styles.imgTertiary}`}
+          />
+        </div>
+
+        {/* Ejemplo de decoraciones */}
+        <Image src={media.orangeDots} alt="Dots Decoration" className={styles.dotsDecor} />
+        <Image src={media.orangeCurve} alt="Curve Decoration" className={styles.curveDecor} />
+        <Image src={media.fourStar} alt="Star Decoration" className={styles.starDecor} />
+      </div>
     </section>
   );
 };
