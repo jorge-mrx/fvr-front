@@ -8,7 +8,8 @@ import MichaelPhoto from '@/assets/certificationSection/eggs.avif';
 
 // 👉 Imágenes y SVGs columna derecha
 import Eggs from '@/assets/certificationSection/eggs.avif';
-import PublicContain from '@/assets/certificationSection/publicContain.webp';
+import PublicContain1 from '@/assets/certificationSection/publicContain.webp';
+import PublicContain2 from '@/assets/certificationSection/publicContain1.webp';
 import OrangeDots from '@/assets/certificationSection/orange-dots.svg';
 import OrangeCurve from '@/assets/certificationSection/orange-curve-shape.svg';
 import FourStar from '@/assets/certificationSection/four-angle-star.svg';
@@ -18,7 +19,8 @@ const CertificationSection = () => {
     emily: EmilyPhoto,
     michael: MichaelPhoto,
     eggs: Eggs,
-    publicContain: PublicContain,
+    publicContain1: PublicContain1,
+    PublicContain2: PublicContain2,
     orangeDots: OrangeDots,
     orangeCurve: OrangeCurve,
     fourStar: FourStar,
@@ -26,7 +28,7 @@ const CertificationSection = () => {
 
   return (
     <section className={styles.section}>
-      {/* Columna izquierda (NO MODIFICADA) */}
+      {/* Columna izquierda */}
       <div className={styles.leftCol}>
         <h1 className={styles.title}>
           Certificación
@@ -140,31 +142,48 @@ const CertificationSection = () => {
         </div>
       </div>
 
-      {/* Columna derecha (ARREGLADA) */}
+      {/* Columna derecha */}
       <div className={styles.rightCol}>
         <div className={styles.imageCard}>
-          {/* Estas imágenes son de muestra, puedes reemplazarlas */}
+          {/* Imágenes */}
           <Image
             src={media.eggs}
             alt="Main Image"
-            className={`${styles.imgMain}`}
+            className={styles.imgMain}
           />
           <Image
-            src={media.publicContain}
+            src={media.PublicContain2}
             alt="Decorative Image 1"
-            className={`${styles.imgSecondary}`}
+            className={styles.imgSecondary}
           />
           <Image
-            src={media.publicContain}
+            src={media.publicContain1}
             alt="Decorative Image 2"
-            className={`${styles.imgTertiary}`}
+            className={styles.imgTertiary}
+          />
+
+          {/* Decoraciones */}
+          <Image
+            src={media.orangeDots}
+            alt="Dots Decoration Top Left"
+            className={styles.dotsTopLeft}
+          />
+          <Image
+            src={media.orangeDots}
+            alt="Dots Decoration Bottom Right"
+            className={styles.dotsBottomRight}
+          />
+          <Image
+            src={media.orangeCurve}
+            alt="Curve Decoration"
+            className={styles.curveDecor}
+          />
+          <Image
+            src={media.fourStar}
+            alt="Star Decoration"
+            className={styles.starDecor}
           />
         </div>
-
-        {/* Ejemplo de decoraciones */}
-        <Image src={media.orangeDots} alt="Dots Decoration" className={styles.dotsDecor} />
-        <Image src={media.orangeCurve} alt="Curve Decoration" className={styles.curveDecor} />
-        <Image src={media.fourStar} alt="Star Decoration" className={styles.starDecor} />
       </div>
     </section>
   );
