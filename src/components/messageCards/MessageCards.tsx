@@ -2,13 +2,14 @@ import React from "react";
 import Image from "next/image";
 import styles from "./MessageCards.module.css";
 
-// Íconos verdes que vas a pasar como .svg (puedes ajustarlos al path correcto)
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons"; // 👈 IMPORTA AQUÍ
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+
+// Íconos verdes decorativos
 import swirlIcon from "@/assets/decors/swirl.svg";
 import globeIcon from "@/assets/decors/globe.svg";
 import targetIcon from "@/assets/decors/arrow.svg";
-
-// Ícono lupa
-import searchIcon from "@/public/icons/search.svg";
 
 const MessageCards: React.FC = () => {
   return (
@@ -29,9 +30,11 @@ const MessageCards: React.FC = () => {
         </div>
         <div className={styles.cardFooter}>
           <Image src={swirlIcon} alt="Decoration swirl" className={styles.icon} />
-          <button className={styles.searchButton}>
-            <Image src={searchIcon} alt="Search" />
-          </button>
+          <div className={styles.searchBox}>
+            <button className={styles.searchButton}>
+                <FontAwesomeIcon icon={faSearch} /> {/* 👈 AQUÍ */}
+            </button>
+          </div>
         </div>
       </div>
 
@@ -39,9 +42,11 @@ const MessageCards: React.FC = () => {
       <div className={styles.card}>
         <div className={styles.cardHeader}>
           <Image src={globeIcon} alt="Globe decoration" className={styles.icon} />
-          <button className={styles.searchButton}>
-            <Image src={searchIcon} alt="Search" />
-          </button>
+          <div className={styles.searchBoxTop}>
+            <button className={styles.searchButton}>
+                <FontAwesomeIcon icon={faSearch} /> {/* 👈 AQUÍ */}
+            </button>
+          </div>
         </div>
         <div className={styles.cardContent}>
           <h3 className={styles.title}>
@@ -71,9 +76,11 @@ const MessageCards: React.FC = () => {
         </div>
         <div className={styles.cardFooter}>
           <Image src={targetIcon} alt="Target decoration" className={styles.icon} />
-          <button className={styles.searchButton}>
-            <Image src={searchIcon} alt="Search" />
-          </button>
+          <div className={styles.searchBox}>
+            <button className={styles.searchButton}>
+                <FontAwesomeIcon icon={faSearch} inverse />
+            </button>
+          </div>
         </div>
       </div>
     </section>

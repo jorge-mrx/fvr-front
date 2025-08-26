@@ -19,6 +19,7 @@ export default function Home() {
       leftText="Unlock Your Food Business Potential with Certification"
       rightText="Certification can elevate your brand's reputation and ensure compliance with industry regulations, helping you stand out in the crowded food marketplace."
       />
+      <div style={{ padding: "3rem" }}></div>
       <MessageCards/>
       <div style={{ padding: "20rem" }}></div>
     </>
