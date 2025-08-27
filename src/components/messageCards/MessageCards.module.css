@@ -1,9 +1,9 @@
 .cardsWrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  max-width: 90%;   /* 👈 límite de ancho */
-  margin: 0 auto;   /* 👈 centrado en la página */
+  gap: 2.5rem;
+  max-width: 75%;
+  margin: 0 auto;
 }
 
 .card {
@@ -39,7 +39,7 @@
 }
 
 .highlight {
-  color: #00426b; /* azul oscuro similar al ejemplo */
+  color: #00426b;
 }
 
 .text {
@@ -102,6 +102,6 @@
 }
 
 .searchButton svg {
-  color: #050505; /* lupa negra */
+  color: #050505;
   font-size: 2.5rem;
 }

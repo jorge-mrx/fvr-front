@@ -3,10 +3,8 @@ import Image from "next/image";
 import styles from "./MessageCards.module.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons"; // 👈 IMPORTA AQUÍ
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
-// Íconos verdes decorativos
 import swirlIcon from "@/assets/decors/swirl.svg";
 import globeIcon from "@/assets/decors/globe.svg";
 import targetIcon from "@/assets/decors/arrow.svg";
