@@ -31,9 +31,7 @@ const CertificationSection = () => {
       {/* Columna izquierda */}
       <div className={styles.leftCol}>
         <h1 className={styles.title}>
-          Certificación
-          <br />
-          de inocuidad alim
+          Certificación de inocuidad alim
           <span className={styles.swooshWrap}>
             entaria
             <svg

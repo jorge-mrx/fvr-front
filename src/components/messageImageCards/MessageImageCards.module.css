@@ -74,3 +74,34 @@
   color: #050505;
   font-size: 1.8rem;
 }
+
+/* 👉 Responsivo para móviles */
+@media (max-width: 768px) {
+  .cardsWrapper {
+    grid-template-columns: 1fr;
+    max-width: 95%;
+  }
+
+  .cardImage {
+    width: 100%;
+    min-height: 15rem;
+  }
+
+  .title {
+    font-size: 1.4rem;
+  }
+
+  .text {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .searchButton {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .searchButton svg {
+    font-size: 1.4rem;
+  }
+}
