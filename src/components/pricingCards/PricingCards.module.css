@@ -1,0 +1,125 @@
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 30px 20px;
+  width: 300px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+}
+
+.planName {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000;
+}
+
+.subtitle {
+  color: #000;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #000;
+}
+
+.period {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-left: 5px;
+  color: #000;
+}
+
+.button {
+  display: inline-block;
+  margin: 15px 0;
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.green {
+  background: #22c55e;
+}
+
+.green:hover {
+  background: #16a34a;
+}
+
+.blue {
+  background: #3b82f6;
+}
+
+.blue:hover {
+  background: #1d4ed8;
+}
+
+.renew {
+  font-size: 0.9rem;
+  color: #000;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 15px;
+  text-align: left;
+  width: 100%;
+}
+
+.features li {
+  margin: 8px 0;
+  font-size: 0.95rem;
+  color: #000;
+  font-weight: bold;
+}
+
+.more {
+  font-size: 0.95rem;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: auto;
+}
+
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 350px;
+  }
+}

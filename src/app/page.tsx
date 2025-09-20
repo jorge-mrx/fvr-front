@@ -6,6 +6,8 @@ import MessageSection from "@/components/messageSection/MessageSection";
 import MessageCards from "@/components/messageCards/MessageCards";
 import WindowsGrid from "@/components/windowGrid/WindowGrid";
 import MessageImageCards from "@/components/messageImageCards/MessageImageCards";
+import Stats  from "@/components/stats/stats";
+import PricingCards from "@/components/pricingCards/PricingCards";
 
 export default function Home() {
   return (
@@ -29,8 +31,9 @@ export default function Home() {
         rightText="Elevate your food business with Food Veritas Register's specialized certification services tailored for micro and small enterprises in the food chain sector. Our mission is to enhance your brand's credibility while ensuring compliance with industry standards, so your products can be recognized for quality and safety."
         decoration="star"
       />
-      <WindowsGrid/>
-      <div style={{ padding: "18rem"}}></div>
+      <div style={{ padding: "2rem"}}></div>
+      <Stats/>
+      <div style={{ padding: "3rem"}}></div>
       <MessageSection
         leftText="Certification Services for Your Food Business"
         rightText="Transform your food-related enterprise with Food Veritas Register's expert certification services tailored for micro and small businesses in the food chain sector. We empower your company to meet industry standards of quality and safety, bolstering your credibility in the market."
@@ -38,6 +41,8 @@ export default function Home() {
       />
       <div style={{ padding: "3rem" }}></div>
       <MessageImageCards/>
+      <div style={{ padding: "2rem" }}></div>
+      <PricingCards/>
       <div style={{ padding: "20rem" }}></div>
     </>
   );

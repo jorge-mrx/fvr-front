@@ -1,0 +1,127 @@
+.container {
+  position: relative;
+  width: 90%;
+  max-width: 1200px;
+  margin: 60px auto;
+  border-radius: 24px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: rgb(27, 27, 27);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.backgroundWrapper {
+  position: relative;
+  width: 100%;
+  height: 405px;
+  overflow: hidden;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+}
+
+.backgroundImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top; /* Muestra la parte superior de la imagen */
+  filter: brightness(0.75) contrast(0.9) saturate(0.9);
+  transition: transform 0.5s ease;
+}
+
+.backgroundImage:hover {
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 40px 20px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  max-width: 700px;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.stats {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* --- StatCards --- */
+.statCard {
+  background: rgba(255, 255, 255, 0.18); /* efecto hover por defecto activo */
+  backdrop-filter: blur(12px);
+  padding: 20px 25px;
+  border-radius: 16px;
+  min-width: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateY(-5px); /* elevación por defecto */
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2); /* sombra por defecto */
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+  color: rgb(27, 27, 27);
+}
+
+.statCard:hover {
+  background: rgba(229, 231, 231, 1); /* color distinto al pasar el cursor */
+  transform: translateY(-8px); /* un poco más elevado al hover */
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+.value {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.label {
+  font-size: 0.95rem;
+  margin-top: 6px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    margin: 40px auto;
+  }
+
+  .backgroundWrapper {
+    height: 220px;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .statCard {
+    min-width: 140px;
+    padding: 16px 18px;
+  }
+
+  .value {
+    font-size: 1.4rem;
+  }
+
+  .label {
+    font-size: 0.85rem;
+  }
+}
